@@ -1,23 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./CardItem.css";
 
-const CardItem = (props) => {
+const CardItem = ({ blog }) => {
+  const { label, image, description } = blog.fields;
   return (
     <>
-      <li className="cards__item">
-        <Link className="cards__item__link" to={props.path}>
-          <figure className="cards__item__pic-wrap" data-category={props.label}>
-            <img
-              src={props.src}
-              alt="Travel Image"
-              className="cards__item__img"
-            />
-          </figure>
-          <div className="cards__item__info">
-            <h5 className="cards__item__text">{props.text}</h5>
-          </div>
-        </Link>
-      </li>
+      <div className="card">
+        <div className="card-image">
+          <img src={image.fields.file.url} />
+        </div>
+        <div className="card-text">
+          <h2>{label}</h2>
+          <p>{description}</p>
+        </div>
+      </div>
     </>
   );
 };

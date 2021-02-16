@@ -1,17 +1,19 @@
 import React from "react";
 import CardItem from "../CardItem/CardItem";
 import "./Cards.css";
-import amazon from "../../images/img-9.jpg";
-import sahara from "../../images/sahara.jpeg";
 
-const Cards = () => {
+const Cards = ({ cards }) => {
   return (
     <div className="cards">
       <h1>Check out these EPIC Destinations! </h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            <CardItem
+            {cards.map((blog, index) => (
+              <CardItem blog={blog} key={index} />
+            ))}
+
+            {/* <CardItem
               src={amazon}
               text="Explore the hidden waterfall deep inside the Amazon jungle"
               label="Adventure"
@@ -42,7 +44,7 @@ const Cards = () => {
               text="Explore the sahara desert with your crew"
               label="Adventure"
               path="/services"
-            />
+            /> */}
           </ul>
         </div>
       </div>
