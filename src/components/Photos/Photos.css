@@ -23,6 +23,7 @@ h1 {
 
 .cards__items {
   display: flex;
+  flex-wrap:wrap;
   flex: 1;
   margin-bottom: 24px;
 }

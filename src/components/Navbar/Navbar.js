@@ -52,7 +52,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/contacts"
+                to="/contact"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
