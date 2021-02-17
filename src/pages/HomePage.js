@@ -8,16 +8,16 @@ import { client } from "../client";
 
 class HomePage extends React.Component {
   state = {
-    blogs: [],
+    photos: [],
   };
 
   componentDidMount() {
     client
       .getEntries()
       .then((response) => {
-        console.log(response);
+        console.log(response.items);
         this.setState({
-          blogs: response.items,
+          photos: response.items,
         });
       })
       .catch(console.error);
@@ -27,7 +27,7 @@ class HomePage extends React.Component {
     return (
       <>
         <HeroSection />
-        <Cards cards={this.state.blogs} />
+        <Cards cards={this.state.photos} />
         <Footer />
       </>
     );

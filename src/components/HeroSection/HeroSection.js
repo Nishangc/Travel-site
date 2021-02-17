@@ -22,8 +22,7 @@ const HeroSection = () => {
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
-          onClick={video1}
-
+          // onClick={video1}
         >
           WATCH TRAILER <i className="far fa-play-circle" />
         </Button>

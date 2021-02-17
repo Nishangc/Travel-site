@@ -33,6 +33,14 @@
   margin-left: 0.5rem;
   font-size: 1.8rem;
 }
+.navbar-profile {
+  color: yellowgreen;
+  border-radius: 2px;
+}
+.navbar-profile-mobile {
+  color: yellowgreen;
+  border-radius: 2px;
+}
 
 .nav-menu {
   display: grid;
@@ -154,5 +162,14 @@
     background: #fff;
     color: #242424;
     transition: 250ms;
+  }
+
+  button.btn--medium {
+    display: none;
+  }
+  .navbar-profile {
+    color: yellowgreen;
+    border-radius: 2px;
+    display: none;
   }
 }
